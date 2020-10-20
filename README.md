@@ -8,4 +8,4 @@ This database is part of a larger corpus, the Distress Analysis Interview Corpus
 
 To assess the severity of the participants' depressive disorders based on predicted PHQ-8 scores using interview transcripts and audio data
 
-Note: Due to non-disclosure, we will not be sharing the dataset. For more information, please refer to http://dcapswoz.ict.usc.edu
+Due to non-disclosure, we will not be sharing the dataset. For more information, please refer to http://dcapswoz.ict.usc.edu
