@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 *.csv
 *.ini
+*.h5
+*.gz
