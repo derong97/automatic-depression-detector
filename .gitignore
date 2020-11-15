@@ -3,3 +3,5 @@
 *.ini
 *.h5
 *.gz
+glove*.txt
+glove*.zip
