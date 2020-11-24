@@ -9,9 +9,3 @@ This database is part of a larger corpus, the Distress Analysis Interview Corpus
 To predict whether the participant is depressed using interview transcripts and audio data.
 
 Due to non-disclosure, we will not be sharing the dataset. For more information, please refer to their [website](http://dcapswoz.ict.usc.edu).
-
-## Set up
-
-1. Download all the neccessary files from my [Google Drive](https://drive.google.com/drive/folders/1yuLqv8IrJNQr_JAuFyAlVaPYRA0ejydZ?usp=sharing). Only authorized members are allowed to perform this operation.
-2. Create `ellie/data` directory and copy the `Y_data.csv` file over. The file contains all the labeled data for every participant.
-3. Copy the `Transcript` folder into `ellie/preprocessing` directory. The folder contains all the transcript files from every participant.

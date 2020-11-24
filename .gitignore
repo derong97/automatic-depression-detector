@@ -3,5 +3,6 @@
 *.ini
 *.h5
 *.gz
+*.vscode
 glove*.txt
 glove*.zip
