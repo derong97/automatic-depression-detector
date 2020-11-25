@@ -10,7 +10,7 @@ Threshold |   Best Model   |    Parameters    | F1 score | Recall
    0.91   |  Random Forest |  RS=42, n_est=1  |   0.17   |  0.14
 
 
-0 , 1 => 	gaze	direction	of both eyes
+0 , 1 => gaze direction in both eyes
 h0, h1 => gaze in head coordinate space
 
 Features | Best Model |   Parameters   | F1 score | Recall
