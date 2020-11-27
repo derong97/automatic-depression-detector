@@ -1,13 +1,15 @@
 # Results
-1. The train dataset is balanced and upsampled through paraphrasing.
-2. The presented validation f1 and recall scores are the mean of the k-cross validation results.
+The train dataset is downsampled to balance the train dataset.
 
 ## `bag_of_words`
+Added Gaussian Naive Bayes model as the baseline model for comparison. BOW is often used with spam text classification.
+
 Best model is saved based on highest val f1 score.
 
 Best Model | Parameters | val f1 | val recall
 :-----: | :-----: | :-----: | :-----: |
-Logistic Regression | C = 1000000 | 0.8112 | 0.8013
-Decision Tree | depth = 4, leaf = 24 | 0.7086 | 0.7199
-Random Forest | estimators = 9 | 0.7969 | 0.7649
-SVM with grid search | C = 100, gamma = 0.0001, kernel = rbf | 0.7826 | 0.7800
+Gaussian Naive Bayes | NIL | 0.4147 | 0.5217
+Logistic Regression | C = 1000000 | 0.6372 | 0.6883
+Decision Tree | depth = 3, leaf = 12 | 0.5625 | 0.5750
+Random Forest | estimators = 29 | 0.5294 | 0.4833
+SVM with grid search | C = 1, deg = 5, kernel = poly | 0.5788 | 0.7367
