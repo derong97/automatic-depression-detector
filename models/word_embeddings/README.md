@@ -3,6 +3,7 @@
 2. The presented validation f1 and recall scores are the mean of the k-cross validation results.
 
 ## `mean_word2vec`
+Best model is saved based on highest val f1 score.
 
 Best Model | Parameters | val f1 | val recall
 :-----: | :-----: | :-----: | :-----:
@@ -12,21 +13,20 @@ Random Forest | estimators = 13 | 0.7316 | 0.6992
 SVM with grid search | C = 100, deg = 3, kernel = poly | 0.8029 | 0.8062
 
 ## `doc2vec`
-Not done.
+Best model is saved based on highest val f1 score.
 
 Best Model | Parameters | val f1 | val recall
 :-----: | :-----: | :-----: | :-----:
-Logistic Regression | 
-Decision Tree | 
-Random Forest | 
-SVM with grid search | 
+Logistic Regression | 0.894 | 0.891
+Decision Tree | 0.7161 | 0.7340
+Random Forest | 0.8164 | 0.7755
+SVM with grid search | 0.9705 | 0.9529
 
 ## `lstm_models`
-Not sure how to save the weights based on best f1 score so cannot compare val and test.
-- KIV: https://stackoverflow.com/questions/55153983/how-to-save-best-model-in-keras-based-on-auc-metric
+Best model is saved based on lowest val loss.
 
 Best Model | Parameters | val f1 | val recall
 :-----: | :-----: | :-----: | :-----:
-Corpus trained LSTM |
-Pretrained Word2Vec |
-Pretrained GloVe |
+Corpus trained | Refer to notebook | 0.6667 | 0.5200
+Pretrained Word2Vec | Refer to notebook | 0.5405 | 0.4000
+Pretrained GloVe | Refer to notebook | 0.5714 | 0.4800
