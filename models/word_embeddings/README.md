@@ -7,8 +7,8 @@
 Best Model | Parameters | val f1 | test f1 | val recall | test recall 
 :-----: | :-----: | :-----: | :-----: | :-----: | :-----:
 Logistic Regression | C = 10000 | 0.8089 | 0.58 | 0.8299 | 0.64
-Decision Tree | depth = 8, leaf = 6 | 0.6845 | 0.34 | 0.6857 | 0.43
-Random Forest | estimators = 13 | 0.7316 | 0.10 | 0.7136 | 0.07
+Decision Tree | depth = 4, leaf = 6 | 0.6845 | 0.34 | 0.6857 | 0.43
+Random Forest | estimators = 13 | 0.7316 | 0.10 | 0.6992 | 0.07
 SVM with grid search | C = 100, deg = 3, kernel = poly | 0.8029 | 0.57 | 0.8062 | 0.57
 
 ## `doc2vec`
