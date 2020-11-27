@@ -17,10 +17,10 @@ Best model is saved based on highest val f1 score.
 
 Best Model | Parameters | val f1 | val recall
 :-----: | :-----: | :-----: | :-----:
-Logistic Regression | 0.894 | 0.891
-Decision Tree | 0.7161 | 0.7340
-Random Forest | 0.8164 | 0.7755
-SVM with grid search | 0.9705 | 0.9529
+Logistic Regression | C = 1000 | 0.894 | 0.891
+Decision Tree | depth = 8 | 0.7161 | 0.7340
+Random Forest | estimators = 23 | 0.8164 | 0.7755
+SVM with grid search | C= 10, deg = 4, kernel = poly | 0.9705 | 0.9529
 
 ## `lstm_models`
 Best model is saved based on lowest val loss.
