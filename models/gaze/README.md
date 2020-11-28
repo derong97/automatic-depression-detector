@@ -8,8 +8,8 @@
 
 Best model is saved based on highest val f1 score.
 
-Using k=10, n=1
 # Without undersampling
+Using k=10, n=1
 Features | Best Model | Parameters | val f1 | val recall
 :-----: | :-----: | :-----: | :-----: | :-----:
 All | Decision Tree | depth: 8, leaf: 7 | 0.24746 | 0.19857
@@ -20,8 +20,8 @@ fh1 | Random Forest | estimators = 1 | 0.37442 | 0.40286
 f0+f1 | Decision Tree | depth: 8, leaf: 6 | 0.32947 | 0.32952
 fh0+fh1 | Decision Tree | depth: 8, leaf: 6 | 0.32947 | 0.32952
 
-Using k=4, n=3
 # With undersampling
+Using k=4, n=3
 Features | Best Model | Parameters | val f1 | val recall
 :-----: | :-----: | :-----: | :-----: | :-----:
 All | Decision Tree | depth: 2, leaf: 12 | 0.53982 | 0.59525
