@@ -1,0 +1,18 @@
+# Results
+
+Models included | val f1 | val recall
+:-----: | :-----: | :-----: 
+BOW (LR,DT,RF), W2V (LR,DT,SVM), TF (SVM), P (DT), G1 (DT), Gh1 (Dt) | 0.50053 | 0.52328
+BOW (LR,DT,RF), W2V (LR,DT,SVM), TF (SVM), G1 (DT), Gh1 (Dt) | 0.51221 | 0.53803
+BOW (LR,DT,RF), W2V (LR,DT,SVM), G1 (DT), Gh1 (Dt) | 0.51305 | 0.53432
+BOW (LR,DT,RF), W2V (LR,DT,SVM), G1 (DT) | 0.50832 | 0.52930
+BOW (LR,DT,RF), W2V (LR,DT,SVM), Gh1 (DT) | 0.51247 | 0.52659
+BOW (LR,DT,RF), W2V (LR,DT,SVM) | 0.50175 | 0.51059
+BOW (LR,DT,RF), W2V (LR,DT), G1 (DT), Gh1 (Dt) | 0.50844 | 0.52791
+BOW (LR,DT,RF), W2V (LR,SVM), G1 (DT), Gh1 (DT) | 0.51624 | 0.53347
+BOW (LR,DT,RF), W2V (SVM), G1 (DT), Gh1 (DT) | 0.51605 | 0.53379
+BOW (LR,DT), W2V (LR,SVM), G1 (DT), Gh1 (DT) | 0.51485 | 0.53023
+BOW (LR,RF), W2V (SVM), G1 (DT), Gh1 (DT) | 0.50637 | 0.51891
+BOW (DT,RF), W2V (SVM), G1 (DT), Gh1 (DT) | 0.54935 | 0.58335
+BOW (DT,RF) | 0.52537 | 0.55046
+BOW (DT), W2V (DT), TF (SVM), Gh1 (DT) | 0.54604 | 0.61462

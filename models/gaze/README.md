@@ -20,6 +20,17 @@ fh1 | Random Forest | estimators = 1 | 0.37442 | 0.40286
 f0+f1 | Decision Tree | depth: 8, leaf: 6 | 0.32947 | 0.32952
 fh0+fh1 | Decision Tree | depth: 8, leaf: 6 | 0.32947 | 0.32952
 
+Using k=4, n=3
+Features | Best Model | Parameters | val f1 | val recall
+:-----: | :-----: | :-----: | :-----: | :-----:
+All | Decision Tree | depth: 7, leaf: 10 | 0.28608 | 0.30003
+f0 | Decision Tree | depth: 8, leaf: 4 | 0.27309 | 0.25353
+f1 | Decision Tree | depth: 10, leaf: 1 | 0.32256 | 0.30496
+fh0 | Decision Tree | depth: 11, leaf: 1 | 0.35291 | 0.36379
+fh1 | Decision Tree | depth: 10, leaf: 3 | 0.22051 | 0.23625
+f0+f1 | Decision Tree | depth: 13, leaf: 1 | 0.30106 | 0.29719
+fh0+fh1 | Decision Tree | depth: 9, leaf: 5 | 0.28877 | 0.29673
+
 # With undersampling
 Using k=4, n=3
 Features | Best Model | Parameters | val f1 | val recall
