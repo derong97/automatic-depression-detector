@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ellie</title>
+    </head>
+    <body>
+        <div id = "container"></div>
+            <form action="{{ url_for('predict')}}"method="post">
+                
+                <input type="text" name="Participant_ID" placeholder="Participant ID" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                
+            </form>
+            <br>
+            <br>
+            <div id = "output">{{ prediction_text }}</div>
+        </div>
+    </body>
+</html>
