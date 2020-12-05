@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ellie</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
+    </head>
+    <body>
+        <div id = "container">
+            <div id = "titlebox"></div>
+            <div id = "title">Ellie</div>
+            <div id = "description">depression predictor</div>   
+            <div id = "cds">50.038 Computational data science</div>
+            <form action="{{ url_for('predict')}}"method="post">
+                <button id = "predict_box" type="submit">PREDICT</button>
+                <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" />
+                <div id = "output">{{ prediction_text }}</div>
+                
+            </form>
+            <div id = "bottombox"></div>
+            
+        </div>
+    </body>
+</html>
