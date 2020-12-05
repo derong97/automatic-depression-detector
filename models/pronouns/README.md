@@ -2,8 +2,7 @@
 The notebook is located [here](https://colab.research.google.com/drive/1M8qHgCoyi1DEtLNYZrCArhODnpJ3YLj8?usp=sharing): 
 The train dataset is downsampled to balance the train dataset.
 
-## `tfidf`
-Added Multinomial Naive Bayes model as the baseline model for comparison. 
+## `pronouns`
 
 Best model is saved based on highest val f1 score.
 
