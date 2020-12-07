@@ -2,18 +2,20 @@
 <html>
     <head>
         <title>Ellie</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
     </head>
     <body>
-        <div id = "container"></div>
-            <form action="{{ url_for('predict')}}"method="post">
+        <div id = "container">
+            <div id = "titlebox"></div>
+            <div id = "title">Ellie</div>
+            <div id = "description">depression predictor</div>   
+            <div id = "cds">50.038 Computational data science</div>
+            
+            <div id = "transcript">{{ transcript }}</div>
                 
-                <input type="text" name="Participant_ID" placeholder="Participant ID" required="required" />
-                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-                
-            </form>
-            <br>
-            <br>
-            <div id = "output">{{ prediction_text }}</div>
+    
+            <div id = "bottombox"></div>
+            
         </div>
     </body>
 </html>

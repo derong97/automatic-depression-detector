@@ -78,8 +78,10 @@
     position: absolute;
     width: 244px;
     height: 86px;
-    left: 598px;
-    top: 608px;
+    left: 133px;
+    top: 710px;
+
+
 
     font-family: Poppins;
     font-style: normal;
@@ -99,6 +101,57 @@
     border-radius: 100px;
 
     
+}
+
+#transcript_box{
+    position: absolute;
+    width: 244px;
+    height: 86px;
+    left: 130px;
+    top: 456px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+    color: #EAE7DF;
+    
+    background-color: #30393D;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    
+}
+
+#label_box{
+    position: absolute;
+    width: 244px;
+    height: 86px;
+    left: 135px;
+    top: 583px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+    color: #EAE7DF;
+    
+    background-color: #30393D;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
 }
 
 /* #predict_button{
@@ -159,8 +212,8 @@
     position: absolute;
     width: 1440px;
     height: 60px;
-    left: 641px;
-    top: 732px;
+    left: 780px;
+    top: 723px;
 
     font-family: Poppins;
     font-style: normal;
@@ -172,7 +225,31 @@
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    /*justify-content: center;*/
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+
+    color: #000000;
+}
+
+#output2{
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    left: 780px;
+    top: 596px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* justify-content: center; */
     letter-spacing: 0.1em;
     text-transform: lowercase;
 
@@ -183,8 +260,8 @@
     position: absolute;
     width: 415px;
     height: 42.82px;
-    left: 512px;
-    top: 490.57px;
+    left: 48px;
+    top: 344px;
     
     font-family: Poppins;
     font-style: normal;
@@ -200,4 +277,22 @@
     color: #000000;
 
 
+}
+
+#transcript{
+    position: absolute;
+    width: 700px;
+    height: 105px;
+    left: 648px;
+    top: 447px;
+    overflow: auto;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: lowercase;
+
+    color: #000000;
 }
