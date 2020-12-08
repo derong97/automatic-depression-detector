@@ -1,5 +1,5 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template, url_for
+from flask import Flask, request, render_template, url_for
 import pickle
 import python.get_features as gf
 import os
@@ -11,13 +11,10 @@ from sklearn.base import clone
 
 import numpy as np 
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, BaggingClassifier, AdaBoostClassifier, VotingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import RepeatedKFold
 
 app = Flask(__name__)
@@ -162,31 +159,23 @@ e.train_ens()
 @app.route('/')
 def home():
 
-    return render_template('index.html',prediction_text='------------------',output2 ='------------------',transcript = "")
+    return render_template('index.html',prediction_text="",output2 = "",transcript = "", parti_ID = "Participant ID: -")
 
 @app.route('/predict',methods = ['POST'])
 def predict():
-    
-    
-    participant_id = request.form["Participant_ID"]
-    participant_id = int(participant_id)
-    X_t, y_t = gf.get_test()
-    e.set_test(X_t,y_t)
-    #X_pred_list, y_pred = gf.get_pred(int(participant_id))
-    #print(ls_X)
-    prediction = e.evaluate_ens()
-    print(prediction)
-    
-    if prediction[participant_id] == 0:
-        text = "not depressed"
-    else:
-        text = "depressed"
-    return render_template('index.html',prediction_text=text)
-
+    pass
+@app.route('/transcript',methods = ['POST'])
+def transcript():
+    pass
+@app.route('/label',methods = ['POST'])
+def label():
+    pass
 @app.route('/predict2',methods = ['POST'])
 def predict2():
-    print(request.form)
-    if "predict" in request.form["submit"]:
+    
+    #print(request.form)
+    
+    """ if "predict" in request.form["submit"]:
         participant_id = request.form["Participant_ID"]
         participant_id = int(participant_id)
         X_t, y_t = gf.get_test()
@@ -197,46 +186,59 @@ def predict2():
         print(prediction)
         
         if prediction[participant_id] == 0:
-            text = "not depressed"
+            text = "predicted as not depressed - 0"
         else:
-            text = "depressed"
+            text = "predicted as depressed - 1"
         return render_template('index.html',prediction_text=text)
+    
     elif "transcript" in request.form["submit"]:
         participant_id = request.form["Participant_ID"]
         participant_id = int(participant_id)
         transcript_final = gf.get_trans(participant_id)
 
         return render_template('index.html',transcript = transcript_final)
+    
     elif "label" in request.form["submit"]:
         participant_id = request.form["Participant_ID"]
         participant_id = int(participant_id)
-        transcript_final = gf.get_trans(participant_id)
         X_t, y_t = gf.get_test()
         if y_t[participant_id] == 0:
-            text = "not depressed"
+            text2 = "not depressed - 0"
         else:
-            text = "depressed"
-        return render_template('index.html',output2 = text)
+            text2 = "depressed - 1"
+        return render_template('index.html',output2 = text2) """
+    pass
 
-@app.route('/transcript',methods = ['POST'])
-def transcript():
+@app.route('/predict3',methods = ['POST'])
+def predict3():
+    
+    #print(request.form)
+    
+    
     participant_id = request.form["Participant_ID"]
     participant_id = int(participant_id)
-    transcript_final = gf.get_trans(participant_id)
+    X_t, y_t = gf.get_test()
+    e.set_test(X_t,y_t)
+    #X_pred_list, y_pred = gf.get_pred(int(participant_id))
+    #print(ls_X)
+    prediction = e.evaluate_ens()
+    #print(prediction)
+    
+    if prediction[participant_id] == 0:
+        text = "predicted as not depressed - 0"
+    else:
+        text = "predicted as depressed - 1"
 
-    return render_template('index.html',transcript = transcript_final)
-
-@app.route('/label',methods = ['POST'])
-def label():
-    participant_id = request.form["Participant_ID"]
-    participant_id = int(participant_id)
     transcript_final = gf.get_trans(participant_id)
     X_t, y_t = gf.get_test()
+
     if y_t[participant_id] == 0:
-        text = "not depressed"
+        text2 = "not depressed - 0"
     else:
-        text = "depressed"
-    return render_template('index.html',output2 = text)
+        text2 = "depressed - 1"
+    return render_template('index.html',output2 = text2, prediction_text=text, transcript = transcript_final, parti_ID = "Participant ID: " + str(participant_id))
+
+
 @app.context_processor
 def override_url_for():
     return dict(url_for=dated_url_for)

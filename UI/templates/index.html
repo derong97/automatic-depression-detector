@@ -1,5 +1,35 @@
 <!DOCTYPE html>
 <html>
+    <script>
+        function toggle_display_t(){
+            t = document.getElementById("transcript")
+            l = document.getElementById("output2")
+            p = document.getElementById("output")
+
+            t.style.visibility = "visible"
+            l.style.visibility = "hidden"
+            p.style.visibility = "hidden"
+        }
+        function toggle_display_l(){
+            t = document.getElementById("transcript")
+            l = document.getElementById("output2")
+            p = document.getElementById("output")
+
+            l.style.visibility = "visible"
+            t.style.visibility = "hidden"
+            p.style.visibility = "hidden"
+        }
+
+        function toggle_display_p(){
+            t = document.getElementById("transcript")
+            l = document.getElementById("output2")
+            p = document.getElementById("output")
+
+            p.style.visibility = "visible"
+            t.style.visibility = "hidden"
+            l.style.visibility = "hidden"
+        }
+    </script>
     <head>
         <title>Ellie</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
@@ -29,16 +59,28 @@
                 
             </form> -->
             
-            <form action="{{ url_for('predict2')}}"method="post">
-                <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" />
-                <input id = "predict_box" type="submit" value = "predict" name = "submit">PREDICT</button>
+            <!-- <form action="{{ url_for('predict2')}}"method="post">
+                <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" autocomplete = "off" />
+                <input id = "predict_box" type="submit" value = "predict" name = "submit">PREDICT</input>
                 <div id = "output">{{ prediction_text }}</div>
-                <input id = "transcript_box" type="submit" value = "transcript" name = "submit">Transcript</button>
+                <input id = "transcript_box" type="submit" value = "transcript" name = "submit">Transcript</input>
                 <div id = "transcript">{{ transcript }}</div>
-                <input id = "label_box" type="submit" value = "label" name = "submit">Label</button>
+                <input id = "label_box" type="submit" value = "label" name = "submit">Label</input>
                 <div id = "output2">{{ output2 }}</div>
             
+            </form> -->
+            <form action="{{ url_for('predict3')}}"method="post">
+                
+                <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" autocomplete = "off" />
+                <button id = "search" type = "submit" name = "submit">search</button>
             </form>
+            <button id = "predict_box" value = "predict" onclick = "toggle_display_p()">PREDICT</button>
+            <div id = "output"  visibility = "hidden">{{ prediction_text }}</div>
+            <button id = "transcript_box" value = "transcript"onclick = "toggle_display_t()"  >Transcript</button>
+            <div id = "transcript" visibility = "hidden">{{ transcript }}</div>
+            <button id = "label_box" value = "label" onclick = "toggle_display_l()" >Label</button>
+            <div id = "output2" >{{ output2 }}</div>
+            <div id = "pid" >{{ parti_ID }}</div>
             
             
         </div>

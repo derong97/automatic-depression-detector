@@ -35,7 +35,7 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 300;
-    font-size: 120px;
+    font-size: 150px;
     line-height: 180px;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@
     letter-spacing: 0.1em;
     text-transform: lowercase;
 
-    color: #000000;
+    color: #fff;
 }
 
 #description{
@@ -154,6 +154,31 @@
     border-radius: 100px;
 }
 
+#search{
+    position: absolute;
+    width: 140px;
+    height: 33.71px;
+    left: 500px;
+    top: 350px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+    color: #EAE7DF;
+    
+    background-color: #30393D;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+}
+
 /* #predict_button{
     position: absolute;
     width: 244px;
@@ -212,8 +237,8 @@
     position: absolute;
     width: 1440px;
     height: 60px;
-    left: 780px;
-    top: 723px;
+    left: 700px;
+    top: 596px;
 
     font-family: Poppins;
     font-style: normal;
@@ -228,7 +253,7 @@
     /*justify-content: center;*/
     letter-spacing: 0.1em;
     text-transform: lowercase;
-
+    visibility: hidden;
     color: #000000;
 }
 
@@ -252,6 +277,34 @@
     /* justify-content: center; */
     letter-spacing: 0.1em;
     text-transform: lowercase;
+    visibility: hidden;
+
+    color: #000000;
+}
+
+
+
+#pid{
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    left: 980px;
+    top: 340px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* justify-content: center; */
+    letter-spacing: 0.1em;
+    
+
 
     color: #000000;
 }
@@ -282,9 +335,9 @@
 #transcript{
     position: absolute;
     width: 700px;
-    height: 105px;
+    height: 300px;
     left: 648px;
-    top: 447px;
+    top: 500px;
     overflow: auto;
 
     font-family: Roboto;
@@ -293,6 +346,6 @@
     font-size: 24px;
     line-height: 26px;
     text-transform: lowercase;
-
+    visibility: hidden;
     color: #000000;
 }

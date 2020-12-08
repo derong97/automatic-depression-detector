@@ -61,7 +61,7 @@ y_train = np.load("python/y_train_final.npy")
 #print(y_test)
 participant_ids = pd.read_csv("python/test_split_Depression_AVEC2017.csv")['participant_ID'].values
 
-trans = pd.read_csv("python/clean_compiled_transcripts.csv", index_col = "Participant_ID")
+trans = pd.read_csv("python/raw_compiled_transcripts.csv", index_col = "Participant_ID")
 
 def get_particpant_ids(id):
     print("Participant: "+ str(participant_ids[id]))
