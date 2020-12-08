@@ -13,8 +13,8 @@ Logistic Regression | C = 1000000 | 0.2952
 SVM with Grid Search| C: 10, kernel: linear | 0.3102 
 
 ### Undersampling
-Best Model | Parameters | val f1 | val recall
-:-----: | :-----: | :-----: | :-----: |
+Best Model | Parameters | val f1 
+:-----: | :-----: | :-----: | 
 Decision Tree | depth = 1, leaf = 30 | 0.6121 
 Random Forest | estimators = 5 | 0.5502 
 Logistic Regression | C = 10000 | 0.2579 
