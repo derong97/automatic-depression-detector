@@ -9,14 +9,37 @@
             <div id = "titlebox"></div>
             <div id = "title">Ellie</div>
             <div id = "description">depression predictor</div>   
+            <div id = "bottombox"></div>
             <div id = "cds">50.038 Computational data science</div>
-            <form action="{{ url_for('predict')}}"method="post">
+            <!-- <form action="{{ url_for('predict')}}"method="post">
                 <button id = "predict_box" type="submit">PREDICT</button>
                 <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" />
                 <div id = "output">{{ prediction_text }}</div>
                 
             </form>
-            <div id = "bottombox"></div>
+            <form action="{{ url_for('transcript')}}"method="post">
+                <button id = "transcript_box" type="submit">Transcript</button>
+                <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" />
+                <div id = "transcript">{{ transcript }}</div>
+            </form>
+            <form action="{{ url_for('label')}}"method="post">
+                <button id = "label_box" type="submit">Label</button>
+                <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" />
+                <div id = "output2">{{ output2 }}</div>
+                
+            </form> -->
+            
+            <form action="{{ url_for('predict2')}}"method="post">
+                <input id = "input" type="text" name="Participant_ID" placeholder="Enter Participant ID" required="required" />
+                <input id = "predict_box" type="submit" value = "predict" name = "submit">PREDICT</button>
+                <div id = "output">{{ prediction_text }}</div>
+                <input id = "transcript_box" type="submit" value = "transcript" name = "submit">Transcript</button>
+                <div id = "transcript">{{ transcript }}</div>
+                <input id = "label_box" type="submit" value = "label" name = "submit">Label</button>
+                <div id = "output2">{{ output2 }}</div>
+            
+            </form>
+            
             
         </div>
     </body>
